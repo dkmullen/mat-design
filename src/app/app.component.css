@@ -1,0 +1,17 @@
+mat-toolbar {
+    margin-bottom: .5em;
+}
+
+button {
+    margin-right: .5em
+}
+
+#wrapper {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+mat-spinner {
+    margin: 50px auto;
+}

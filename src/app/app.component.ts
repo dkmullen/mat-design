@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  spinning: boolean = true;
+
+  ngOnInit() {
+    this.spinMe();
+  }
+
+  spinMe() {
+    this.spinning = true;
+    setTimeout(() => { this.spinning = false; }, 2000);
+  }
+
 }
