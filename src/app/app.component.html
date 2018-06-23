@@ -1,20 +1,57 @@
-<div id="wrapper">
+<mat-sidenav-container>
+    <mat-sidenav 
+      mode="side" opened
+      #mySideNav>
 
-  <mat-toolbar color="primary">
-    <span>My Application</span>
-  </mat-toolbar>
+      <mat-list>      
+        <h1 mat-subheader>Main</h1>
+        <mat-list-item>One</mat-list-item>
+        <mat-list-item>Two</mat-list-item>
+        <mat-list-item>Three</mat-list-item>
+        <mat-list-item>Four </mat-list-item>
+        <mat-list-item>Five</mat-list-item>
+      </mat-list>  
+    </mat-sidenav>
 
-  <div>
-    <button mat-raised-button class="mat-primary">Hello</button>
-    <button mat-icon-button><mat-icon>power</mat-icon></button>
-    <button mat-fab (click)="spinMe()"><mat-icon>add</mat-icon></button>
-    <button mat-mini-fab class="mat-warn">P</button>
-  </div>
+    <mat-sidenav-content>
+        <div id="wrapper">
 
-  <div>
-    <mat-spinner *ngIf="spinning"></mat-spinner>
-  </div>
+            <mat-toolbar color="primary">
+              <span>My Application</span>
+            </mat-toolbar>
+          
+            <div>
+              <button mat-raised-button 
+                class="mat-primary" 
+                (click)="mySideNav.toggle()"
+                >Hello
+              </button>
+              <button mat-icon-button><mat-icon>power</mat-icon></button>
+              <button mat-fab (click)="spinMe()" matTooltip="Start the spinner"><mat-icon>add</mat-icon></button>
+              <button mat-mini-fab class="mat-warn">P</button>
+            </div>
+          
+            <div>
+              <mat-slider min="1" max="5" step="0.5" value="1.5"></mat-slider>
+            </div>
+          
+            <div id="check">
+              <mat-checkbox>Check it out!</mat-checkbox>
+            </div>
+          
+            <section>
+              <mat-radio-group>
+                <mat-radio-button value="1">Hmm?</mat-radio-button>
+                <mat-radio-button value="2">Wha?</mat-radio-button>
+              </mat-radio-group>
+            </section>
+            
+            <div>
+              <mat-spinner *ngIf="spinning"></mat-spinner>
+            </div>
+          </div>
+    </mat-sidenav-content>
 
-</div>
+  </mat-sidenav-container>
 
 

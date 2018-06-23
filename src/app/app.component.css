@@ -10,8 +10,17 @@ button {
     margin: 0 auto;
     text-align: center;
     max-width: 600px;
+    min-height: 700px;
 }
 
 mat-spinner {
     margin: 50px auto;
+}
+
+#check {
+    margin-bottom: 15px;
+}
+
+mat-radio-button {
+    margin: 0 15px;
 }

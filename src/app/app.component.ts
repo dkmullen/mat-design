@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   spinning: boolean = true;
+  navOpened: boolean = false;
 
   ngOnInit() {
     this.spinMe();
@@ -16,6 +17,10 @@ export class AppComponent {
   spinMe() {
     this.spinning = true;
     setTimeout(() => { this.spinning = false; }, 2000);
+  }
+
+  toggleSideNav() {
+    return !this.navOpened;
   }
 
 }
